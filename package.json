@@ -1,16 +1,15 @@
 {
-  "name": "color",
-  "version": "1.0.0",
+  "name": "@jlongyam/color",
+  "version": "0.1.0",
   "description": "",
   "main": "./dist.color.cjs",
   "scripts": {
     "test": "node ./test/color.test.js && exit 1",
-    "test:legacy": "~/Program/node-v5.12.0-darwin-x64/bin/node ./test/cjs/color.test.cjs",
+    "test:legacy": "~/Program/node-v5.12.0-darwin-x64/bin/node ./dist/color.test.js",
     "buble": "buble src -o stage -n moduleImport,moduleExport",
     "bundle": "rollup -c",
-    "babel": "babel stage -d dist",
-    "server": "serve ./",
-    "clean": "rm -rf stage"
+    "babel": "babel stage -d dist && rm -rf stage",
+    "server": "serve ./"
   },
   "repository": {
     "type": "git",
@@ -25,9 +24,7 @@
   },
   "homepage": "https://github.com/jlongyam/color#readme",
   "dependencies": {
-    "@jlongyam/env": "^1.1.3",
-    "ansi-colors": "^4.1.3",
-    "ansi-html": "^0.0.9"
+    "@jlongyam/env": "^1.1.3"
   },
   "engines": {
     "node": ">=5.12"

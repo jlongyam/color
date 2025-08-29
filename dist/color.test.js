@@ -1,11 +1,13 @@
-const color = require("../dist/color.cjs");
-const env = require("@jlongyam/env");
+var browser = (typeof window !== 'undefined');
+if(!browser) {
+  const color = require("./color.cjs");
+}
 
 var v, m;
 var variant = ['black','red','green','orange','blue','purple','teal','white','gray'];
 var mod = ['normal','bold','dim','italic','underline','blink'];
 for(v = 0; v < variant.length; v++) {
-  if(env.browser) {
+  if(browser) {
     var d = document, b = d.body;
     b.innerHTML += '<pre>color '+color[variant[v]](variant[v])+'</pre>';
     b.innerHTML += '<pre>color '+color.bg[variant[v]]('bg '+variant[v])+'</pre>';

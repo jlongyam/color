@@ -8,23 +8,7 @@ const plugin = [
 	commonjs(),
 	buble()
 ];
-// export default [{
-// 	input: './src/ansiColor.js',
-// 	output: {
-// 		file: './lib/ansiColor.js',
-// 		format: 'es',
-// 		strict: false
-// 	},
-// 	plugins: plugin
-// }, {
-// 	input: './src/ansiHtml.js',
-// 	output: {
-// 		file: './lib/ansiHtml.js',
-// 		format: 'es',
-// 		strict: false
-// 	},
-// 	plugins: plugin
-// }];
+
 export default [{
 	input: './src/color.js',
 	output: {
@@ -32,7 +16,7 @@ export default [{
 		format: 'cjs'
 	},
 	plugins: plugin
-}/*, {
+}, {
 	input: './src/color.js',
 	output: {
 		file: './dist/color.js',
@@ -40,4 +24,4 @@ export default [{
 		name: 'color'
 	},
 	plugins: plugin
-}*/]
+}]
