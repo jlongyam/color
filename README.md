@@ -23,6 +23,7 @@ Text colorizer for node and browser.
     white: (value),
     gray: (value)
   },
+  // fg
   black: (value),
   red: (value),
   green: (value),
@@ -32,6 +33,7 @@ Text colorizer for node and browser.
   teal: (value),
   white: (value),
   gray: (value),
+  // styles
   normal: (value),
   bold: (value),
   dim: (value),
